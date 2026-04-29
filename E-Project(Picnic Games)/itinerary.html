@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Itinerary — Picnic Games</title>
+  <meta name="description" content="Craft your perfect escape with curated picnic itineraries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Picnic Games</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resorts.html">Resorts</a>
+        <a href="games.html">Games</a>
+        <a href="places.html">Places</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="login.html">Book Now</a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="itin-hero">
+      <div>
+        <span class="section-tag">Adventure Awaits</span>
+        <h1 style="font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,60px);line-height:1.05;margin:14px 0">Craft Your <span style="color:var(--green-deep);font-style:italic">Perfect</span><br/>Escape</h1>
+        <p style="color:var(--muted);max-width:480px">Explore curated picnic itineraries designed for small getaways. From coastal breezes to mountain heights, we've planned the details so you can enjoy the moment.</p>
+        <div class="meta-row">
+          <span>📍 4 Destinations</span>
+          <span>✅ Expert Guided</span>
+        </div>
+      </div>
+      <img src="img/basket.jpg" alt="Picnic basket on grass"/>
+    </section>
+
+    <section class="grid-4" style="margin-top:24px">
+      <a href="itinerary-detail-beach.html" class="itin-card">
+        <div class="img"><img src="img/itin-beach.jpg" alt="Beach picnic"/><span class="pill" style="background:#7fc1ff">Sky Blue Pick</span></div>
+        <div class="body">
+          <h3>One-day beach picnic</h3>
+          <div class="meta">🏐 Sandcastle building, Surfing, Sunbathing</div>
+          <div class="meta">📍 Hawke's Bay / French Beach</div>
+          <span class="btn btn-blue">Details →</span>
+        </div>
+      </a>
+      <a href="itinerary-detail-camping.html" class="itin-card">
+        <div class="img"><img src="img/itin-camp.jpg" alt="Camping near lakes"/><span class="pill" style="background:#ffb98a;color:#3a1606">Accent Orange</span></div>
+        <div class="body">
+          <h3>Camping near lakes</h3>
+          <div class="meta">🔥 Bonfire storytelling, BBQ night, Stargazing</div>
+          <div class="meta">📍 Khanpur Lake / Keenjhar Lake</div>
+          <span class="btn btn-orange">Details →</span>
+        </div>
+      </a>
+      <a href="itinerary-detail-waterpark.html" class="itin-card">
+        <div class="img"><img src="img/place-waterpark.jpg" alt="Water park"/><span class="pill" style="background:#5edc7a;color:#0a2b18">Family Choice</span></div>
+        <div class="body">
+          <h3>Water park adventure</h3>
+          <div class="meta">💦 Water slides, Wave pools, Splash games</div>
+          <div class="meta">📍 Fiesta / Dreamworld Resort</div>
+          <span class="btn btn-primary">Details →</span>
+        </div>
+      </a>
+      <a href="itinerary-detail-hiking.html" class="itin-card">
+        <div class="img"><img src="img/itin-hike.jpg" alt="Mountain hiking"/><span class="pill" style="background:#7fc1ff">Explorer</span></div>
+        <div class="body">
+          <h3>Mountain hiking picnic</h3>
+          <div class="meta">🥾 Trail exploration, Peak photography, Bird watching</div>
+          <div class="meta">📍 Margalla Hills / Nathia Gali</div>
+          <span class="btn btn-mint">Details →</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="custom-plan">
+      <h3>Can't decide on a trip?</h3>
+      <p>Let our adventure planners create a custom itinerary for your group. Just tell us your vibe and we'll handle the rest.</p>
+      <form class="plan-form" data-demo-form>
+        <input placeholder="Tell us your mood (e.g. Chill, Wild)" />
+        <button type="submit" class="btn btn-primary">Get Custom Plan</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Picnic Games</h4>
+          <p>Making memories under the open sky. We curate experiences that connect people with nature and each other.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="resorts.html">Browse Resorts</a>
+          <a href="games.html">Adventure Games</a>
+          <a href="contact.html">Safety Guidelines</a>
+          <a href="contact.html">Booking Policy</a>
+        </div>
+        <div>
+          <h4>Adventure Support</h4>
+          <p>☎ +92 300 123 4567</p>
+          <p>✉ hello@picnicgames.com</p>
+          <div class="socials"><a>🌐</a><a>↗</a></div>
+        </div>
+      </div>
+      <div class="copy">© 2026 Picnic Games. Adventure Awaits.</div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

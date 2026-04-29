@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Picnic Games</title>
+  <meta name="description" content="Plan your mountain retreat or coastal getaway. Get in touch with the Picnic Games team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Picnic Games</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resorts.html">Resorts</a>
+        <a href="games.html">Games</a>
+        <a href="places.html">Places</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="login.html">Book Now</a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <h1>Let's Start Your <span class="accent">Adventure.</span></h1>
+      <p>Whether you're planning a mountain retreat or a coastal getaway, our team is here to craft your perfect itinerary. Reach out and let the games begin.</p>
+    </section>
+
+    <section class="contact-grid">
+      <form class="form-card" data-demo-form>
+        <h2>Send a Message</h2>
+        <div class="row-fields">
+          <div class="field"><label>Full Name</label><input placeholder="John Doe" required/></div>
+          <div class="field"><label>Email Address</label><input type="email" placeholder="john@example.com" required/></div>
+        </div>
+        <div class="field">
+          <label>Select Adventure</label>
+          <div class="adventure-pick">
+            <button type="button" class="pick active">Resort Stay</button>
+            <button type="button" class="pick">Hiking Games</button>
+            <button type="button" class="pick">Corporate Picnic</button>
+          </div>
+        </div>
+        <div class="field"><label>Your Message</label><textarea placeholder="Tell us about your dream picnic..."></textarea></div>
+        <button class="send-btn" type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+      </form>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="info-card">
+          <div class="info-row"><div class="ic"><i class="fas fa-phone"></i></div><div><div class="label">Call Us</div><strong>+92 (300) 123-4567</strong><small>Mon-Fri, 9am - 6pm PST</small></div></div>
+          <div class="info-row"><div class="ic"><i class="fas fa-envelope"></i></div><div><div class="label">Email Us</div><strong>hello@picnicgames.pk</strong><small>Typical response within 4 hours</small></div></div>
+          <div class="info-row"><div class="ic"><i class="fas fa-map-marker-alt"></i></div><div><div class="label">Base Camp</div><strong>Gulberg III, Lahore</strong><small>Punjab, Pakistan</small></div></div>
+        </div>
+        <div class="map-card">
+          <div class="map-pin"><i class="fas fa-compass"></i></div>
+          <div class="strip"><span>LAHORE HEADQUARTERS</span><a href="https://maps.google.com/?q=Gulberg+III+Lahore+Punjab+Pakistan" target="_blank" style="color:var(--green-deep)">GET DIRECTIONS</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="community">
+      <div class="label">Join the Community</div>
+      <div class="icons"><a><i class="fas fa-globe"></i></a><a><i class="fas fa-external-link-alt"></i></a><a><i class="fas fa-camera"></i></a><a><i class="fas fa-film"></i></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Picnic Games</h4>
+          <p>We curate world-class outdoor experiences that combine luxury, nature, and play.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="resorts.html">Resorts</a>
+          <a href="games.html">Outdoor Games</a>
+          <a href="itinerary.html">Travel Guide</a>
+          <a>Privacy Policy</a>
+        </div>
+        <div>
+          <h4>Adventure Awaits</h4>
+          <div style="display:flex;gap:14px;margin-top:10px">
+            <div style="background:#bfe6bf;color:var(--green-deep);padding:14px 22px;border-radius:999px;text-align:center"><strong style="font-size:20px">15+</strong><div style="font-size:11px;letter-spacing:.1em">RESORTS</div></div>
+            <div style="background:#7fc1ff;color:#072b50;padding:14px 22px;border-radius:999px;text-align:center"><strong style="font-size:20px">500+</strong><div style="font-size:11px;letter-spacing:.1em">EVENTS</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">© 2026 Picnic Games. Adventure Awaits.</div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
