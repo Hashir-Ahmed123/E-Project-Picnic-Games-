@@ -251,7 +251,7 @@ This project is created for educational purposes.
 
 # 👨‍💻 Author
 
-Developed by **Afreen Fahad**
+Developed by **Hashir Ahmed**
 Aptech E-Project — Picnic Games
 
 ---
