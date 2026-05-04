@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Picnic Games — Escape to the Great Outdoors</title>
+  <meta name="description" content="Premium picnic experiences, luxury resorts, adventure games, and curated outdoor escapes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Picnic Games</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="Resorts/resorts.html">Resorts</a>
+        <a href="Games/games.html">Games</a>
+        <a href="Places/places.html">Places</a>
+        <a href="Itinerary/itinerary.html">Itinerary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="Authentication/login.html">Book Now</a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-img" src="img/hero.jpg" alt="Mountain valley picnic" />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Escape to the<br/><span class="accent">Great Outdoors</span></h1>
+          <p>Premium picnic experiences curated in the heart of nature's finest landscapes. Adventure, games, and memories await.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Places/places.html">Explore Maps</a>
+            <button class="btn btn-ghost" id="watchStoryBtn">▶ Watch Story</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR RESORTS -->
+    <section class="section">
+      <div class="popular-resorts">
+        <div class="row-head">
+          <div>
+            <span class="section-tag" style="background:#cfeacf;color:var(--green-deep)">Stay in luxury</span>
+            <h2 class="section-title" style="margin-top:10px;font-size:34px">Popular Resorts</h2>
+          </div>
+          <a class="view-all" href="Resorts/resorts.html">View All →</a>
+        </div>
+        <div class="grid-3">
+          <a href="Resorts/resort-detail.html" class="card">
+            <div class="thumb"><img loading="lazy" src="img/resort-pine.jpg" alt="Pine Whispers Retreat"/></div>
+            <h3>Pine Whispers Retreat</h3>
+            <p>A secluded sanctuary offering eco-luxury cabins amid the northern coniferous forests.</p>
+            <div class="meta"><span class="price">$240 / night</span><span>★ 4.9</span></div>
+          </a>
+          <a href="Resorts/resort-detail-azure.html" class="card">
+            <div class="thumb"><img loading="lazy" src="img/resort-azure.jpg" alt="Azure Coast Resort"/></div>
+            <h3>Azure Coast Resort</h3>
+            <p>Experience the rhythm of the waves at our premium beachside escape on the Adriatic coast.</p>
+            <div class="meta"><span class="price">$310 / night</span><span>★ 4.8</span></div>
+          </a>
+          <a href="Resorts/resort-detail-mirror.html" class="card">
+            <div class="thumb"><img loading="lazy" src="img/resort-mirror.jpg" alt="Mirror Lake Lodge"/></div>
+            <h3>Mirror Lake Lodge</h3>
+            <p>Wake up to crystal reflections and morning mist in this serene lakeside getaway.</p>
+            <div class="meta"><span class="price">$215 / night</span><span>★ 4.9</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVENTURE GAMES -->
+    <section class="section" style="padding-top:0">
+      <div class="section-head center">
+        <span class="section-tag" style="background:#cfeacf;color:var(--green-deep)">Play Hard</span>
+        <h2 class="section-title">Adventure Games</h2>
+      </div>
+      <div class="mosaic">
+        <a href="Games/game-detail-volleyball.html" class="game-card">
+          <div class="img"><img src="img/game-volleyball.jpg" alt="Volleyball"/><span class="game-badge green">Moderate</span><h3 class="game-name">Volleyball</h3></div>
+          <div class="body"><p>Gather your team for a competitive match under the sun. High-energy rallies on premium sand courts.</p>
+            <div class="tag-line"><span class="ic">🏐</span> Team Activity</div>
+          </div>
+        </a>
+        <a href="Games/game-detail-jetski.html" class="game-card">
+          <div class="img"><img src="img/game-jetski.jpg" alt="Jet Ski Safari"/><span class="game-badge warm">Extreme</span><h3 class="game-name">Jet Ski Safari</h3></div>
+          <div class="body"><p>High speeds, clear water</p>
+            <div class="tag-line"><span class="ic">🌊</span> Water Adventure</div>
+          </div>
+        </a>
+        <a href="Games/game-detail-archery.html" class="game-card">
+          <div class="img"><img src="img/game-archery.jpg" alt="Archery Tag"/><span class="game-badge green">Moderate</span><h3 class="game-name">Archery Tag</h3></div>
+          <div class="body"><p></p>
+            <div class="tag-line"><span class="ic">🏹</span> Precision Game</div>
+          </div>
+        </a>
+        <a href="Games/game-detail-obstacle.html" class="game-card" style="grid-column:2 / span 2">
+          <div class="img"><img src="img/game-obstacle.jpg" alt="Obstacle Race"/><span class="game-badge warm">Extreme</span><h3 class="game-name">Obstacle Race</h3></div>
+          <div class="body"><p>Test your limits in the woods</p>
+            <div class="tag-line"><span class="ic">🏃‍♂️</span> Endurance Challenge</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- POPULAR PICNIC PLACES -->
+    <section class="section" style="padding-top:0">
+      <div class="section-head" style="text-align:right">
+        <span class="section-tag" style="background:#cfeacf;color:var(--green-deep)">Discover Nature</span>
+        <h2 class="section-title" style="text-align:right">Popular Picnic Places</h2>
+      </div>
+      <div class="places-grid">
+        <div class="place" style="min-height:420px">
+          <img src="img/place-waterfall.jpg" alt="Silver Mist Falls"/>
+          <div class="info">
+            <h3>Silver Mist Falls</h3>
+            <p>Hidden behind tropical foliage, this natural spectacle offers serenity, breathtaking views and crisp air.</p>
+            <a class="btn btn-ghost" style="margin-top:14px" href="Places/places.html">Check availability →</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div class="place" style="min-height:200px">
+            <img src="img/place-beach.jpg" alt="Golden Sands Cove"/>
+            <div class="info"><h3 style="font-size:22px">Golden Sands Cove</h3><p>The perfect blend of soft breezes and warm sun. Ideal for families and late-night bonfires.</p></div>
+          </div>
+          <div class="place" style="min-height:200px">
+            <img src="img/place-farmhouse.jpg" alt="Emerald Meadows"/>
+            <div class="info"><h3 style="font-size:22px">Emerald Meadows</h3><p>A vast expanse of lush green surrounded by wildflowers — perfect for a laid-back picnic.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENDING ACTIVITIES -->
+    <section class="section" style="padding-top:0">
+      <div class="trending">
+        <div class="row-head">
+          <h2 class="section-title" style="font-size:32px;margin:0">Trending Activities</h2>
+        </div>
+        <div class="activities">
+          <div class="activity"><div class="icon"><i class="fas fa-ship"></i></div><h4>River Kayaking</h4><p>Navigate the gentle currents of the river.</p></div>
+          <div class="activity"><div class="icon"><i class="fas fa-hiking"></i></div><h4>Guided Treks</h4><p>Discover hidden viewpoints with local hosts.</p></div>
+          <div class="activity"><div class="icon"><i class="fas fa-fire"></i></div><h4>Live BBQ Setup</h4><p>A delicious spread at your picnic site.</p></div>
+          <div class="activity"><div class="icon"><i class="fas fa-star"></i></div><h4>Stargazing Camps</h4><p>Sleep under the clearest skies on earth.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Picnic Games</h4>
+          <p>Creating world-class outdoor experiences. From mountain retreats to coastal escapes.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="Resorts/resorts.html">Browse Resorts</a>
+          <a href="Games/games.html">Safety Guidelines</a>
+          <a href="Places/places.html">Adventure Gallery</a>
+          <a href="Itinerary/itinerary.html">Old Vouchers</a>
+        </div>
+        <div>
+          <h4>Contact Details</h4>
+          <a><i class="fas fa-envelope"></i> hello@picnicgames.pk</a>
+          <a><i class="fas fa-phone"></i> +92 (300) 123-4567</a>
+          <a><i class="fas fa-map-marker-alt"></i> Gulberg III, Lahore, PK</a>
+          <div class="socials"><a><i class="fab fa-facebook-f"></i></a><a><i class="fab fa-instagram"></i></a><a><i class="fab fa-twitter"></i></a></div>
+        </div>
+      </div>
+      <div class="copy"> 2026 Picnic Games. Adventure Awaits.</div>
+    </div>
+  </footer>
+  
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <div class="video-modal-header">
+        <h3>Picnic Games - Our Story</h3>
+        <button class="video-modal-close" id="closeVideoModal">&times;</button>
+      </div>
+      <div class="video-modal-body">
+        <div class="video-container">
+          <video id="storyVideo" controls poster="img/hero.jpg">
+            <source src="North Pakistan  from a Drone.mp4" type="video/mp4">
+            <p>Your browser doesn't support HTML5 video. Here's a <a href="North Pakistan  from a Drone.mp4">link to the video</a> instead.</p>
+          </video>
+        </div>
+        <div class="video-description">
+          <p>Discover the magic of Picnic Games - where adventure meets luxury in Pakistan's most beautiful outdoor destinations. From mountain retreats to coastal escapes, we create unforgettable experiences that bring people together.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="Authentication/firebase-config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
