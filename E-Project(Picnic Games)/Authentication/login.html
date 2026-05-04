@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Picnic Games</title>
+  <meta name="description" content="Login to your Picnic Games account to book your next adventure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Picnic Games</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../Resorts/resorts.html">Resorts</a>
+        <a href="../Games/games.html">Games</a>
+        <a href="../Places/places.html">Places</a>
+        <a href="../Itinerary/itinerary.html">Itinerary</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="signup.html">Sign Up</a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="auth-section">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h1>Welcome Back</h1>
+          <p>Login to your account to continue your adventure</p>
+        </div>
+        
+        <form class="auth-form" data-demo-form>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="hello@picnicgames.pk" />
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" />
+          </div>
+          
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          
+          <button class="btn btn-primary" type="submit" id="loginBtn">Login</button>
+        </form>
+        
+        <div class="auth-divider">
+          <span>OR</span>
+        </div>
+        
+        <div class="social-login">
+          <button class="btn btn-social btn-google" id="googleSignInBtn">
+            <span class="social-icon"><i class="fab fa-google"></i></span>
+            Sign in with Google
+          </button>
+        </div>
+        
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="signup.html" class="auth-link">Sign up</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Picnic Games</h4>
+          <p>Creating world-class outdoor experiences. From mountain retreats to coastal escapes.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="../Resorts/resorts.html">Browse Resorts</a>
+          <a href="../Games/games.html">Safety Guidelines</a>
+          <a href="../Places/places.html">Adventure Gallery</a>
+          <a href="../Itinerary/itinerary.html">Old Vouchers</a>
+        </div>
+        <div>
+          <h4>Contact Details</h4>
+          <a>✉ hello@picnicgames.pk</a>
+          <a>☎ +92 (300) 123-4567</a>
+          <a>📍 Gulberg III, Lahore, PK</a>
+          <div class="socials"><a>f</a><a>i</a><a>@</a></div>
+        </div>
+      </div>
+      <div class="copy">© 2026 Picnic Games. Adventure Awaits.</div>
+    </div>
+  </footer>
+  <script src="firebase-config.js"></script>
+  <script src="auth.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
